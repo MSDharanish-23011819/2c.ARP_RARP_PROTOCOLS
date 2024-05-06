@@ -1,4 +1,7 @@
 # 2c.SIMULATING ARP /RARP PROTOCOLS
+## NAME : DHARANISH MS
+## REGISTER NO : 212223240027
+
 ## AIM
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
