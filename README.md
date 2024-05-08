@@ -1,17 +1,17 @@
 # 2c.SIMULATING ARP /RARP PROTOCOLS
-## NAME : DHARANISH MS
-## REGISTER NO : 212223240027
+# NAME : DHARANISH MS
+# REGISTER NO : 212223240027
 
 ## AIM
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
-## Client:
+### Client:
 1. Start the program
 2. Using socket connection is established between client and server.
 3. Get the IP address to be converted into MAC address.
 4. Send this IP address to server.
 5. Server returns the MAC address to client.
-## Server:
+### Server:
 1. Start the program
 2. Accept the socket which is created by the client.
 3. Server maintains the table in which IP and corresponding MAC addresses are
@@ -20,7 +20,7 @@ stored.
 5. Map the IP address with its MAC address and return the MAC address to client.
 
 ## PROGRAM - ARP
-# Client
+### Client
 ```
 import socket
 s=socket.socket()
@@ -34,8 +34,9 @@ while True:
         c.send(address[ip].encode()) 
     except KeyError:
         c.send("Not Found".encode())
+
 ```
-# Server 
+### Server 
 ```
 import socket
 s=socket.socket()
@@ -46,18 +47,18 @@ while True:
  print("MAC Address",s.recv(1024).decode())
 ```
 ## OUPUT - ARP
-# Client
+### Client
 ![Screenshot 2024-05-06 134605](https://github.com/MSDharanish-23011819/2c.ARP_RARP_PROTOCOLS/assets/147139454/f031a0be-448e-4b01-b946-4db10f668a15)
 
 
 
-# Server 
+### Server 
 
 ![Screenshot 2024-05-06 134618](https://github.com/MSDharanish-23011819/2c.ARP_RARP_PROTOCOLS/assets/147139454/fb849671-1ad7-4f91-b177-c5882491e123)
 
 
 ## PROGRAM - RARP
-# Client
+### Client
 ```
 import socket
 s=socket.socket()
@@ -72,7 +73,7 @@ while True:
  except KeyError:
      c.send("Not Found".encode())
 ```
-# Server
+### Server
 ```
 import socket
 s=socket.socket()
@@ -84,11 +85,11 @@ while True:
 ```
 
 ## OUTPUT -RARP
-# Client
+### Client
 ![Screenshot 2024-05-06 134753](https://github.com/MSDharanish-23011819/2c.ARP_RARP_PROTOCOLS/assets/147139454/a4330a5e-4ce9-4dc0-8a57-74f46a9ed012)
 
 
-# Server
+### Server
 ![Screenshot 2024-05-06 134804](https://github.com/MSDharanish-23011819/2c.ARP_RARP_PROTOCOLS/assets/147139454/3bcb0743-d15a-49a5-9d13-5c39ba5fb15a)
 
 ## RESULT
